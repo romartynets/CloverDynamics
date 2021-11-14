@@ -1,0 +1,74 @@
+$mobile: 769px;
+$tablet: 992px;
+$desktop: 1200px;
+
+.content {
+    display: flex;
+    justify-content: center;  
+  }
+  
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  &__wrapper {
+    width: calc(100% / 6);
+    padding: 0 15px 30px;
+    box-sizing: border-box;
+    @media (max-width: $desktop) {
+      width: calc(100% / 5);    
+    }
+    @media (max-width: $tablet) {
+      width: calc(100% / 4);    
+      padding: 0 10px 20px;
+    }
+    @media (max-width: $mobile) {
+      width: calc(100% / 2);
+      padding: 0 5px 10px;
+    }
+
+  }
+  &__item {
+    padding-bottom: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+  }
+}
+
+.btnLoadMore {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.inputs {
+  margin: 0 -15px;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  &__item {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+  
+.loader {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.errorMessage{
+  font-size: 25px;
+  text-align: center;    
+}
